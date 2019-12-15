@@ -31,7 +31,7 @@
         var topButton = positionFeilds.y + user.offsetHeight / 6;
         var leftButton = positionFeilds.x + user.offsetWidth - 50;
         button.style.cssText =
-          "position:fixed;top:" +
+          "position:absolute;top:" +
           topButton +
           "px;left:" +
           leftButton +
@@ -52,7 +52,7 @@
 
               var iframe = document.createElement("iframe");
               iframe.id = "safeguardIframe";
-              iframe.src = "http://127.0.0.1:3000/" + location.host;
+              iframe.src = "https://safeguard.icu/" + location.host;
               iframe.style.cssText =
                 "position:fixed;top:" +
                 topPopupIframe +

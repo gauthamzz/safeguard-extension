@@ -1,5 +1,5 @@
 {
-  "name": "safeguard",
+  "name": "Safeguard",
   "options_page": "options.html",
   "background": {
     "page": "background.html"
@@ -26,6 +26,7 @@
   "manifest_version": 2,
   "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
   "web_accessible_resources": [
-    "http://127.0.0.1:3000"
+    "http://127.0.0.1:3000",
+    "https://www.safeguard.icu"
 ]
 }

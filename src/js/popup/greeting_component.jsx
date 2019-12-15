@@ -35,7 +35,7 @@ function injectPassword(url, user, password) {
 }
 
 function GreetingComponent() {
-  const [domain, setDomain] = useState("http://127.0.0.1:3000/");
+  const [domain, setDomain] = useState("https://safeguard.icu/");
 
   var eventMethod = window.addEventListener
     ? "addEventListener"
@@ -48,6 +48,8 @@ function GreetingComponent() {
     var data = e.data;
     if (data.app === "safeguard-web")
       injectPassword(data.url, data.username, data.password);
+    if (data.open === "true")
+      chrome.tabs.create({ url: "https://safeguard.icu/" });
   });
 
   chrome.tabs.getSelected(function(tab) {
@@ -56,14 +58,14 @@ function GreetingComponent() {
       tab.url.indexOf("https://chrome.google.com") != 0 &&
       tab.url.indexOf("chrome://") != 0
     )
-      setDomain("http://127.0.0.1:3000/" + url.host);
+      setDomain("https://safeguard.icu/" + url.host);
   });
 
   return (
     <div>
       <iframe
         frameBorder="0"
-        height="400px"
+        height="450px"
         width="350px"
         src={domain}
       ></iframe>

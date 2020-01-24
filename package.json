@@ -1,6 +1,6 @@
 {
   "name": "Safeguard",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Decentralized password manager",
   "scripts": {
     "build": "node utils/build.js",

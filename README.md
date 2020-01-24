@@ -12,4 +12,3 @@ Chrome extension for safeguard - decentralized password manager
 
 MIT
 
-Credits to Samuel Simões and chrome extension webpack boilerplate
